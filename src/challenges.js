@@ -84,7 +84,7 @@ function highestCount(array2) {
 
   let biggerNumber = array2[0];
 
-  for (let index = 0; index < array2.length; index+=1) {
+  for (let index = 0; index < array2.length; index += 1) {
 
     if (biggerNumber < array2[index]) {
 
@@ -96,7 +96,7 @@ function highestCount(array2) {
 
   let guarda = 0;
 
-  for (let index = 0; index < array2.length; index +=1){
+  for (let index = 0; index < array2.length; index += 1) {
 
 
     if (biggerNumber == array2[index]) {
@@ -110,8 +110,29 @@ function highestCount(array2) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  //  mouse = 5, cat = 3
+  let distancie = Math.abs(mouse - cat1);
+  let distancie2 = Math.abs(mouse - cat2);
+
+  if (distancie > distancie2) {
+
+    return 'cat2';
+
+  }
+
+  else if (distancie2 > distancie) {
+
+    return 'cat1';
+
+  }else{
+
+    return 'os gatos trombam e o rato foge';
+
+  }
+
+
+
 }
 
 // Desafio 8
