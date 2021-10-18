@@ -1,20 +1,6 @@
-
-let positivo = true;
-let negativo = false;
-
-compareTrue(false, false)
-
-function compareTrue(valorA, valorB) {
-
-  if (valorA == true && valorB == true) {
-
-    return true;
-
-  }else {
-
-    return false;
-  }
-
+// Desafio 1
+function compareTrue() {
+  // seu código aqui
 }
 
 // Desafio 2
