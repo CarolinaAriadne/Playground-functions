@@ -8,11 +8,11 @@ function compareTrue(valorA, valorB) {
 
   if (valorA == true && valorB == true) {
 
-    console.log(true);
+    return true;
 
-  } else {
+  }else {
 
-    console.log(false);
+    return false;
   }
 
 }
