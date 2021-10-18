@@ -10,7 +10,7 @@ function compareTrue(valorA, valorB) {
 
     return true;
 
-  }else {
+  } else {
 
     return false;
   }
@@ -18,13 +18,30 @@ function compareTrue(valorA, valorB) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+
+calcArea(5, 2);
+function calcArea(base, height) {
+
+  let result = 0;
+
+  result = (base * height) / 2;
+
+  return result;
+
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+
+let frase = 'go Trybe';
+
+splitSentence(frase);
+
+function splitSentence(frase) {
+
+  let array = frase.split(" ");
+
+  return array;
+
 }
 
 // Desafio 4
