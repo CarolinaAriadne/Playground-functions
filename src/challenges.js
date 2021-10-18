@@ -45,8 +45,17 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+
+let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+
+let nomes = '';
+
+function concatName(array) {
+
+  nomes = array[array.length - 1] + ', ' + array[0];
+
+  return nomes;
+
 }
 
 // Desafio 5
