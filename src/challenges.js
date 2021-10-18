@@ -59,13 +59,54 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+
+// footballPoints(14, 8);
+
+function footballPoints(wins, ties) {
+
+  let points = wins * 3;
+
+  let points2 = ties * 1;
+
+  return points + points2;
+
+
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+// let array2 = [9, 1, 2, 3, 9, 5, 7];
+
+
+// highestCount(array2); 
+
+function highestCount(array2) {
+
+  let biggerNumber = 0;
+
+  for (let index = 0; index < array2.length; index+=1) {
+
+    if (biggerNumber < array2[index]) {
+
+      biggerNumber = array2[index];
+
+    }
+
+  }
+
+  let guarda = 0;
+
+  for (let index = 0; index < array2.length; index +=1){
+
+
+    if (biggerNumber == array2[index]) {
+
+      guarda = guarda + 1;
+    }
+  }
+
+  return guarda;
+
 }
 
 // Desafio 7
