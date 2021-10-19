@@ -70,7 +70,6 @@ function footballPoints(wins, ties) {
 
   return points + points2;
 
-
 }
 
 // Desafio 6
@@ -125,19 +124,55 @@ function catAndMouse(mouse, cat1, cat2) {
 
     return 'cat1';
 
-  }else{
+  } else {
 
     return 'os gatos trombam e o rato foge';
 
   }
 
-
-
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+let array3 = [9, 25];
+
+function fizzBuzz(array3) {
+
+  let returnArray = [];
+
+  for (let index = 0; index < array3.length; index += 1) {
+
+
+    if (array3[index] % 3 == 0 && array3[index] % 5 !== 0 && array3[index] % 7 !== 0) {
+
+      returnArray.push('fizz');
+     
+    }
+
+    if (array3[index] % 5 == 0 && array3[index] % 3 !== 0 && array3[index] % 7 !== 0) {
+
+
+      returnArray.push('buzz');
+
+    }
+
+
+    if (array3[index] % 3 == 0 && array3[index] % 5 == 0) {
+
+
+      returnArray.push('fizzBuzz');
+    }
+
+    if (array3[index] % 3 !== 0 && array3[index] % 5 !== 0) {
+
+      returnArray.push('bug!');
+
+    }
+
+  }
+
+  return returnArray;
+
 }
 
 // Desafio 9
