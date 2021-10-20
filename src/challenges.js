@@ -146,7 +146,7 @@ function fizzBuzz(array3) {
     if (array3[index] % 3 == 0 && array3[index] % 5 !== 0 && array3[index] % 7 !== 0) {
 
       returnArray.push('fizz');
-     
+
     }
 
     if (array3[index] % 5 == 0 && array3[index] % 3 !== 0 && array3[index] % 7 !== 0) {
@@ -176,11 +176,32 @@ function fizzBuzz(array3) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+let valor1 = 'hi there';
+
+function encode(valor1) {
+
+  let valor2 = valor1;
+
+  for (let index = 0; index < valor1.length; index += 1) {
+
+    valor2 = valor1.replace(/e/g, '2').replace(/a/g, '1').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
+  }
+
+  return valor2;
 }
-function decode() {
-  // seu código aqui
+
+let valor3 = 'h3 th2r2';
+
+function decode(valor3) {
+
+  let valor4 = valor3;
+  for (let index2 = 0; index2 < valor3.length; index2 += 1) {
+
+    valor4 = valor3.replace(/2/g, 'e').replace(/1/g, 'a').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+
+  }
+  return valor4;
 }
 
 module.exports = {
