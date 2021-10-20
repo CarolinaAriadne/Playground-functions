@@ -177,31 +177,91 @@ function fizzBuzz(array3) {
 
 // Desafio 9
 
+
 let valor1 = 'hi there';
 
 function encode(valor1) {
 
-  let valor2 = valor1;
+  let novovalor = valor1;
 
-  valor2 = valor1.replace(/e/g, '2').replace(/a/g, '1').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
+  for (let index = 0; index < valor1.length; index += 1) {
 
-  return valor2;
+    if (valor1[index] == 'a') {
+
+      novovalor = novovalor.replace('a', '1');
+
+    }
+
+    if (valor1[index] == 'e') {
+
+      novovalor = novovalor.replace('e', '2'); //novo valor, recebe o novo valor já de forma modificada (com as substituições) 
+
+      //novovalor = h3 there
+      //novovalor = h3 there -> replace -> h3 th2re
+      //novovalor = h3 th2re
+    }
+
+
+    if (valor1[index] == 'i') {
+
+      novovalor = novovalor.replace('i', '3');
+      //novovalor = hi there
+      //novovalor = hi there -> replace -> h3 there
+      //novovalor = h3 there
+
+    }
+
+    if (valor1[index] == 'o') {
+
+      novovalor = novovalor.replace('o', '4');
+
+    }
+
+    if (valor1[index] == 'u') {
+
+      novovalor = novovalor.replace('u', '5');
+
+    }
+  }
+  return novovalor;
 }
 
-let valor3 = 'h3 th2r2';
+let valor2 = 'h3 th2r2';
 
-function decode(valor3) {
+function decode(valor2) {
 
-  let valor4 = valor3;
+  let valor3 = valor2;
 
+  for (let index2 = 0; index2 < valor2.length; index2 += 1) {
 
-  valor4 = valor3.replace(/2/g, 'e').replace(/1/g, 'a').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+    if (valor2[index2] == '2') {
 
+      valor3 = valor3.replace('2', 'e');
+    }
 
-  return valor4;
+    if (valor2[index2] == '1') {
+
+      valor3 = valor3.replace('1', 'a');
+    }
+
+    if (valor2[index2] == '3') {
+
+      valor3 = valor3.replace('3', 'i');
+    }
+
+    if (valor2[index2] == '4') {
+
+      valor3 = valor3.replace('4', 'o');
+    }
+
+    if (valor2[index2] == '5') {
+
+      valor3 = valor3.replace('5', 'u');
+
+    }
+  }
+  return valor3;
 }
-
-// replace substituir string por outra string - g: para encontrar todas letras - concatenação de todas hipóteses, para que guarde as substituições, ponto para concatenar por ser concatenação de método
 
 module.exports = {
   calcArea,
