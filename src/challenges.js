@@ -38,7 +38,7 @@ splitSentence(frase);
 
 function splitSentence(frase) {
 
-  let array = frase.split(" ");
+  let array = frase.split(" "); //split divide o texto e retorna em elementos separados, separados por vírgula
 
   return array;
 
@@ -110,8 +110,8 @@ function highestCount(array2) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  //  mouse = 5, cat = 3
-  let distancie = Math.abs(mouse - cat1);
+  //  mouse = 5, cat = 3  
+  let distancie = Math.abs(mouse - cat1); //math.abs para que considere qualquer número colocado como positivo
   let distancie2 = Math.abs(mouse - cat2);
 
   if (distancie > distancie2) {
@@ -183,10 +183,7 @@ function encode(valor1) {
 
   let valor2 = valor1;
 
-  for (let index = 0; index < valor1.length; index += 1) {
-
-    valor2 = valor1.replace(/e/g, '2').replace(/a/g, '1').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
-  }
+  valor2 = valor1.replace(/e/g, '2').replace(/a/g, '1').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
 
   return valor2;
 }
@@ -196,13 +193,15 @@ let valor3 = 'h3 th2r2';
 function decode(valor3) {
 
   let valor4 = valor3;
-  for (let index2 = 0; index2 < valor3.length; index2 += 1) {
 
-    valor4 = valor3.replace(/2/g, 'e').replace(/1/g, 'a').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
 
-  }
+  valor4 = valor3.replace(/2/g, 'e').replace(/1/g, 'a').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+
+
   return valor4;
 }
+
+// replace substituir string por outra string - g: para encontrar todas letras - concatenação de todas hipóteses, para que guarde as substituições, ponto para concatenar por ser concatenação de método
 
 module.exports = {
   calcArea,
