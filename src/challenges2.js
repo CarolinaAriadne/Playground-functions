@@ -25,14 +25,15 @@ function techList(tecno, nome) {
 
 // Desafio 11
 
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+//const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+const array = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4];
 
 const lengthIncorret = 'Array com tamanho incorreto.';
 const numbersImpossible =
   'não é possível gerar um número de telefone com esses valores';
 
 function generatePhoneNumber(array) {
-  let numberVezesSeRepete = 0;
+  let numberVezesSeEmQueONumeroAparece = 1;
 
   if (array.length !== 11) {
     return lengthIncorret;
@@ -43,11 +44,11 @@ function generatePhoneNumber(array) {
     }
     for (let j = index + 1; j < array.length; j++) {
       if (array[index] === array[j]) {
-        numberVezesSeRepete += 1;
-        if (numberVezesSeRepete >= 3) return numbersImpossible;
+        numberVezesSeEmQueONumeroAparece += 1;
+        if (numberVezesSeEmQueONumeroAparece >= 3) return numbersImpossible;
       }
     }
-    numberVezesSeRepete = 0;
+    numberVezesSeEmQueONumeroAparece = 1;
   }
   const arrayModificado = array.join('');
 
@@ -55,18 +56,18 @@ function generatePhoneNumber(array) {
 
   for (let index2 = 0; index2 < arrayModificado.length; index2++) {
     if (index2 === 0) {
-      phoneNumber = '(';
+      phoneNumber += '(';
     } else if (index2 === 2) {
-      phoneNumber = ') ';
-    } else if (index2 === 6) {
-      phoneNumber = '-';
+      phoneNumber += ') ';
+    } else if (index2 === 7) {
+      phoneNumber += '-';
     }
-    phoneNumber =+ arrayModificado[index2];
+    phoneNumber += arrayModificado[index2];
   }
   return phoneNumber;
 }
 
-generatePhoneNumber(array);
+console.log(generatePhoneNumber(array));
 
 // Desafio 12
 function triangleCheck() {
