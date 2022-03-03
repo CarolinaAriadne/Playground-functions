@@ -74,38 +74,49 @@ let lineB = 9;
 let lineC = 2;
 
 function triangleCheck(linhaA, linhaB, linhaC) {
-
-  if (linhaA < (linhaB + linhaC)) {
-    if (
-       Math.abs( (linhaB - linhaC)) < linhaA) 
-    {
+  if (linhaA < linhaB + linhaC) {
+    if (Math.abs(linhaB - linhaC) < linhaA) {
       return true;
     }
   }
-  if (linhaB < (linhaA + linhaC)) {
-    if (
-      Math.abs((linhaA - linhaC)) <  linhaB)
-    {
+  if (linhaB < linhaA + linhaC) {
+    if (Math.abs(linhaA - linhaC) < linhaB) {
       return true;
     }
   }
-  if (linhaC < (linhaA + linhaB)) {
-    if (
-      Math.abs((linhaB - linhaA)) < linhaC)
-   {
+  if (linhaC < linhaA + linhaB) {
+    if (Math.abs(linhaB - linhaA) < linhaC) {
       return true;
     }
   }
   return false;
 }
 
-console.log(triangleCheck(lineA, lineB, lineC));
+// console.log(triangleCheck(lineA, lineB, lineC));
 
+const string = '1 cerveja';
+
+// console.log(typeof(Number(result[2])));
+
+// console.log(result);
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let reg = /\d+/g;
+  let result = string.match(reg);
+  let resultadoSomaTotal = 0;
+
+  for (let index = 0; index < result.length; index++) {
+    resultadoSomaTotal = resultadoSomaTotal + Number(result[index]);
+  }
+  if (resultadoSomaTotal > 1) {
+    return `${resultadoSomaTotal} copos de água`;
+  } else {
+    return `${resultadoSomaTotal} copo de água`;
+  }
 }
+
+console.log(hydrate(string));
 
 module.exports = {
   generatePhoneNumber,
