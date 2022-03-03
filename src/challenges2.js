@@ -21,11 +21,9 @@ function techList(tecno, nome) {
     return arrayObjeto;
   }
 }
-// console.log(resultado);
 
 // Desafio 11
 
-//const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 const array = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4];
 
 const lengthIncorret = 'Array com tamanho incorreto.';
@@ -67,12 +65,42 @@ function generatePhoneNumber(array) {
   return phoneNumber;
 }
 
-console.log(generatePhoneNumber(array));
+generatePhoneNumber(array);
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+
+let lineA = 16;
+let lineB = 9;
+let lineC = 2;
+
+function triangleCheck(linhaA, linhaB, linhaC) {
+
+  if (linhaA < (linhaB + linhaC)) {
+    if (
+       Math.abs( (linhaB - linhaC)) < linhaA) 
+    {
+      return true;
+    }
+  }
+  if (linhaB < (linhaA + linhaC)) {
+    if (
+      Math.abs((linhaA - linhaC)) <  linhaB)
+    {
+      return true;
+    }
+  }
+  if (linhaC < (linhaA + linhaB)) {
+    if (
+      Math.abs((linhaB - linhaA)) < linhaC)
+   {
+      return true;
+    }
+  }
+  return false;
 }
+
+console.log(triangleCheck(lineA, lineB, lineC));
+
 
 // Desafio 13
 function hydrate() {
